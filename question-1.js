@@ -1,12 +1,21 @@
 function findStudentById(students, id) {
   // Your code here
+  let result = null;
+  let s = students.length - 1;
+  for (let i = 0; i < s; i++) {
+    if (students[i].id === id) {
+      result = students[i];
+    }
+  }
+
+  return `Output: ${JSON.stringify(result)}`;
 }
 
 // Test case
 const students = [
-  { id: 1, name: "Alice" },
-  { id: 2, name: "Bob" },
-  { id: 3, name: "Charlie" },
+  { id: 1, name: 'Alice' },
+  { id: 2, name: 'Bob' },
+  { id: 3, name: 'Charlie' }
 ];
 
 console.log(findStudentById(students, 2)); // Output: { id: 2, name: 'Bob' }
